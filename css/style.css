@@ -6,6 +6,15 @@
 *{
 	margin: 0;
 }
+.fs{
+	font-size: 180px;
+	color: #d0d0d0;
+	opacity: 0.23;
+	font-size: 180px;
+	position: absolute;
+	font-family: "Proxima Nova";
+	top: 1300px;
+}
 .block_1{
 	background-color: black;
 	width: 100%;
@@ -524,6 +533,10 @@ background-color: white;
 	.a  {
 		margin-left: 35px;
 	}
+	.fs{
+		font-size: 150px;
+		top: 1340px;
+	}
 }
 @media screen and (max-width: 1260px) {
 	.text{
@@ -542,4 +555,12 @@ background-color: white;
 		font-size: 32px;
 	}
 	
+	
+}
+@media screen and (max-width: 1260px) {
+	
+	.fs{
+		font-size: 110px;
+		top: 1360px;
+	}
 }
