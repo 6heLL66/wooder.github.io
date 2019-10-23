@@ -5,6 +5,7 @@
 	<title>Wooder</title>
 	<link rel="stylesheet" href="./css/style.css">
 	<link href="fonta/css/all.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<span class="alltextt" style="top: 850px;left: 10%;">F</span>
@@ -182,7 +183,36 @@
 			<div class="str_logo" style="color: #676565;font-size: 16px;margin-right: 25px;font-family:Proxima Nova;">Designed by Rick and Morty</div>
 		</div>
 	</div>
-	<script src="./js/mainjs.js">
+
+
+	<script>
+	$(document).ready(function (){
+		$(document).on('mousedown',dragstart);
+
+	});
+
+	function dragstart(e){
+		e.preventDefault();
+		mousepos = e.screenY;
+		$(document).on('mousemove',drag);
+		$(document).on('mouseup',dragstop);
+	}
+	function drag(e){
+		delta = mousepos - e.screenY;
+		to = setTimeout(function(){
+			$(document).scrollTop($(document).scrollTop()+delta);
+
+		},1);
+		mousepos = e.screenY;
+	}
+
+	function dragstop(e)	{
+		$(document).off('mousemove mouseup mouseout');
+	}
+		
+		
+		
+	</script>
 </body>
 </html>
 
